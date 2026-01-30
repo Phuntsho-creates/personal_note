@@ -36,13 +36,13 @@ defmodule PersonalNoteWeb.Layouts do
   def app(assigns) do
     ~H"""
     <header class="navbar px-4 sm:px-6 lg:px-8">
-      <div class="flex-1">
+      <%!-- <div class="flex-1">
         <a href="/" class="flex-1 flex w-fit items-center gap-2">
 
           <span class="text-sm font-semibold">v{Application.spec(:phoenix, :vsn)}</span>
         </a>
-      </div>
-      <div class="flex-none">
+      </div> --%>
+      <%!-- <div class="flex-none">
         <ul class="flex flex-column px-1 space-x-4 items-center">
           <li>
             <a href="https://phoenixframework.org/" class="btn btn-ghost">Website</a>
@@ -50,16 +50,16 @@ defmodule PersonalNoteWeb.Layouts do
           <li>
             <a href="https://github.com/phoenixframework/phoenix" class="btn btn-ghost">GitHub</a>
           </li>
-          <li>
+          <%!-- <li>
             <.theme_toggle />
-          </li>
-          <li>
+          </li> --%>
+          <%!-- <li>
             <a href="https://hexdocs.pm/phoenix/overview.html" class="btn btn-primary">
               Get Started <span aria-hidden="true">&rarr;</span>
             </a>
           </li>
         </ul>
-      </div>
+      </div> --%>
     </header>
 
     <main class="px-4 py-20 sm:px-6 lg:px-8">
@@ -151,4 +151,57 @@ defmodule PersonalNoteWeb.Layouts do
     </div>
     """
   end
+  def nav(assigns) do
+  ~H"""
+  <div class={[
+        "fixed top-0 left-10 right-10 mt-10 z-10 transition-all duration-500 rounded-xl dark:bg-gray-100",
+        "bg-base-content/50 dark:bg-gray-100 backdrop-blur-md shadow-lg"
+      ]}>
+    <ul class="border bg-base-200 flex justify-center gap-5 p-8 rounded-xl shadow-2xl border-base-100 text-l font-bold">
+
+      <li class="shadow-2xl hover:shadow-2xl transition transform hover:-translate-y-1 hover:scale-105">
+      <.link navigate={~p"/"}>Features</.link></li>
+
+      <li class="shadow-2xl hover:shadow-2xl transition transform hover:-translate-y-1 hover:scale-105">
+      <.link navigate={~p"/"}>Reviews</.link></li>
+
+      <li class="shadow-2xl hover:shadow-2xl transition transform hover:-transalte-y-1 hover:scale-105">
+      <.link navigate={~p"/"}>FAQs</.link></li>
+
+      <li class="shadow-2xl hover:shadow-2xl transition transform hover:-transalte-y-1 hover:scale-105">
+      <.link navigate={~p"/"}>Contact Us</.link></li>
+
+      <li class="shadow-2xl hover:shadow-2xl transition transform hover:-transalte-y-1 hover:scale-105">
+        <.link navigate={~p"/login"}>
+          <.icon name="hero-user" /> Log in
+        </.link>
+      </li>
+
+      <li class="shadow-2xl hover:shadow-2xl transition transform hover:-transalte-y-1 hover:scale-105">
+        <.link navigate={~p"/register"}>
+          <.icon name="hero-user" /> Register
+        </.link>
+      </li>
+
+      <.theme_toggle />
+
+    </ul>
+  </div>
+  """
+end
+
+def footer(assigns)do
+  ~H"""
+  <footer class="mt-12 text-lg p-10 shadow-2xl border-shadow-2xl mb-2 bg-base-300">
+
+   <h1 class="flex justify-center text-red-900"> © 2026 Personal Notes App</h1>
+  <p class="dark:text-base-content">Company</p>
+  <hr>
+  <p class="text-green-900 dark:text-base-content">Contact Us </p>
+  <p class="text-green-900 dark:text-base-content">About Us</p>
+  <p class="text-green-900 dark:text-base-content">Privicy Policy</p>
+  <p class="text-green-900 dark:text-base-content">Terms And Conditions</p>
+  </footer>
+  """
+end
 end

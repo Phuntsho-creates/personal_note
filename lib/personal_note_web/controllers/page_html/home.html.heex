@@ -1,14 +1,16 @@
+<Layouts.nav current_path="/" />
+
 <main class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-primary/10 to-base-100 p-6 animate-fadeIn">
-  <h1 class="text-5xl font-bold mb-4 text-base-content drop-shadow-lg animate-bounce">
+  <h1 class="text-5xl font-bold mb-4 text-base-content drop-shadow-lg animate-bounce mt-50">
     📝 Personal Notes
   </h1>
   <p class="text-lg text-base-content/80 mb-8 text-center max-w-xl animate-fadeIn delay-200">
     Organize your thoughts, instantly and easily. Keep track of everything that matters.
   </p>
   <div>
-    <.link href={~p"/notes"} class="bg-primary text-primary-content shadow-lg hover:shadow-2xl hover:bg-primary/90 p-4 rounded-lg transition transform hover:scale-105"> 
+    <a href={~p"/notes"} class="bg-primary text-primary-content shadow-lg hover:shadow-2xl hover:bg-primary/90 p-4 rounded-lg transition transform hover:scale-105"> 
       Go to my Notes 
-    </.link>
+    </a>
   </div>
   <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
     <div class="p-6 bg-base-200 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1 hover:scale-105 flex flex-col items-center text-center border border-base-100">
@@ -32,7 +34,14 @@
       <p class="text-base-content/70">Works beautifully on desktop and mobile devices.</p>
     </div>
   </div>
-  <footer class="mt-12 text-base-content/50 text-sm">
-    © 2026 Personal Notes App
-  </footer>
-</main>
+  <div class="mt-12 text-lg p-10 shadow-2xl border-shadow-2xl mb-2 bg-base-300 w-full rounded-xl">
+
+   <h1 class="flex justify-center text-red-900"> © 2026 Personal Notes App</h1>
+  <p class="dark:text-base-content">Company</p>
+  <hr>
+  <p class="text-green-900 dark:text-base-content">Contact Us </p>
+  <p class="text-green-900 dark:text-base-content">About Us</p>
+  <p class="text-green-900 dark:text-base-content">Privicy Policy</p>
+  <p class="text-green-900 dark:text-base-content">Terms And Conditions</p>
+  </div>
+  </main>
