@@ -65,7 +65,6 @@ defmodule PersonalNoteWeb.Layouts do
     <main class="px-4 py-20 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-2xl space-y-4">
         {render_slot(@inner_block)}
-        <.footer/>
       </div>
     </main>
 
@@ -196,7 +195,12 @@ def footer(assigns)do
   <footer class="mt-12 text-lg p-10 shadow-2xl border-shadow-2xl mb-2 bg-base-300">
 
    <h1 class="flex justify-center text-red-900"> © 2026 Personal Notes App</h1>
-
+  <p class="dark:text-base-content">Company</p>
+  <hr>
+  <p class="text-green-900 dark:text-base-content">Contact Us </p>
+  <p class="text-green-900 dark:text-base-content">About Us</p>
+  <p class="text-green-900 dark:text-base-content">Privicy Policy</p>
+  <p class="text-green-900 dark:text-base-content">Terms And Conditions</p>
   </footer>
   """
 end
